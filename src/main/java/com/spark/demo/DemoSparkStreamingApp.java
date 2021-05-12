@@ -16,9 +16,6 @@ public class DemoSparkStreamingApp {
         // Initialize Spark Streaming Context
         SparkSession spark = SparkSession
                 .builder()
-                .config("spark.driver.extraJavaOptions", "-Dlog4j.configuration=src/main/resources/log4j.properties")
-                .config("spark.executor.extraJavaOptions", "-Dlog4j.configuration=src/main/resources/log4j.properties")
-                .master("spark://172.19.0.2:7077")
                 .appName("JavaStructuredNetworkWordCount")
                 .getOrCreate();
 
